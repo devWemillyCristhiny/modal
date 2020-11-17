@@ -1,11 +1,20 @@
-import React from 'react'
-import styled from 'styled-components';
+import React, {useState} from 'react'
+import styled from 'styled-components'
+import { Modal } from './components/Modal'
+import { GlobalStyle } from './globalStyles'
 
 function App() {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(prev => !prev);
+  }
   return (
     <>
       <Container>
-        <Button>I´m a modal</Button>
+        <Button onClick={openModal}>I´m a modal</Button>
+        <Modal showModal={showModal} setShowModal={setShowModal}/>
+        <GlobalStyle/>
       </Container>
     </>
   );
@@ -24,6 +33,7 @@ const Button = styled.button`
   border-radius: 4px;
   border: none;
   background: #141414;
+  color: #fff;
   font-size: 24px;
   cursor: pointer; 
 `;
