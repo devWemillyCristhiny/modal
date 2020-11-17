@@ -1,6 +1,6 @@
 # Modal
 
-### Design de caixa de depoimentos responsivos com CSS Grid | CSS Html
+### Responsivos com CSS Grid | CSS Html
 ### Este projeto tem como objetivo criar habiliadades com componentização e CSS
 
 <img src="./src/imagem/Modal002.png">
